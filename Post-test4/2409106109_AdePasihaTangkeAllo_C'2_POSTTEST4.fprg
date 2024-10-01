@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="2409106109_AdePasihaTangkeAllo_C2'24_POSTTEST4"/>
+        <attribute name="authors" value="hp"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-01 03:06:19 PM"/>
+        <attribute name="created" value="aHA7TEFQVE9QLVFDSVZBRk5NOzIwMjQtMDktMzA7MTA6MzM6MzQgUE07MjYwMA=="/>
+        <attribute name="edited" value="aHA7TEFQVE9QLVFDSVZBRk5NOzIwMjQtMTAtMDE7MDM6MDY6MTkgUE07NTsyNzA3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="password, loop, perulangan" type="Integer" array="False" size=""/>
+            <declare name="nama, program" type="String" array="False" size=""/>
+            <assign variable="loop" expression="0"/>
+            <while expression="loop&lt;3">
+                <output expression="&quot;masukan Nama Anda&quot;" newline="True"/>
+                <input variable="nama"/>
+                <output expression="&quot;Masukan Password Anda&quot;" newline="True"/>
+                <input variable="Password"/>
+                <if expression="Nama==&quot;ade&quot;and password==109">
+                    <then>
+                        <output expression="&quot;Apakah Anda Ingin Melanjutkan Program Ini? ya/tidak&quot;" newline="True"/>
+                        <input variable="program"/>
+                        <if expression="Program==&quot;ya&quot; or program==&quot;tidak&quot;">
+                            <then>
+                                <declare name="Mobil" type="Integer" array="False" size=""/>
+                                <declare name="diskon, hargamobil, hargadiskon" type="Real" array="False" size=""/>
+                                <output expression="&quot;Masukan Merk Mobil 1 adalah tesla, mekr 2 toyota, merk 3 hyundai&quot;" newline="True"/>
+                                <input variable="mobil"/>
+                                <if expression="mobil= 1">
+                                    <then>
+                                        <assign variable="diskon" expression="0.17"/>
+                                        <output expression="&quot;Masukan Harga&quot;" newline="True"/>
+                                        <input variable="hargamobil"/>
+                                        <assign variable="hargadiskon" expression="hargamobil-(hargamobil*diskon)"/>
+                                    </then>
+                                    <else>
+                                        <if expression="mobil=2">
+                                            <then>
+                                                <assign variable="diskon" expression="0.21"/>
+                                                <output expression="&quot;Masukan Harga&quot;" newline="True"/>
+                                                <input variable="hargamobil"/>
+                                                <assign variable="hargadiskon" expression="hargamobil-(hargamobil*diskon)"/>
+                                            </then>
+                                            <else>
+                                                <if expression="mobil=3">
+                                                    <then>
+                                                        <assign variable="diskon" expression="0.23"/>
+                                                        <output expression="&quot;Masukan Harga&quot;" newline="True"/>
+                                                        <input variable="hargamobil"/>
+                                                        <assign variable="hargadiskon" expression="hargamobil-(hargamobil*diskon)"/>
+                                                    </then>
+                                                    <else>
+                                                        <output expression="&quot;tidak jadi membeli mobil&quot;" newline="True"/>
+                                                    </else>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                                <output expression="&quot;harga mobil &quot;&amp; mobil" newline="True"/>
+                                <output expression="&quot;Rp &quot;&amp; hargadiskon" newline="True"/>
+                                <breakpoint expression="" always="True"/>
+                            </then>
+                            <else>
+                                <output expression="&quot;Program Anda telah selesai&quot;" newline="True"/>
+                                <breakpoint expression="" always="True"/>
+                            </else>
+                        </if>
+                    </then>
+                    <else>
+                        <output expression="&quot;Apakah Anda Ingin Mengakhiri Program Ini (iya/tidak)&quot;" newline="True"/>
+                        <input variable="program"/>
+                        <if expression="Program==&quot;iya&quot;">
+                            <then>
+                                <output expression="&quot;Program Anda Telah Selesai&quot;" newline="True"/>
+                                <breakpoint expression="" always="True"/>
+                            </then>
+                            <else>
+                                <assign variable="loop" expression="loop+1"/>
+                                <assign variable="perulangan" expression="3-loop"/>
+                                <output expression="&quot;Batas Percoba Yang Tersisa Tinggal&quot;" newline="True"/>
+                                <output expression="perulangan" newline="True"/>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
